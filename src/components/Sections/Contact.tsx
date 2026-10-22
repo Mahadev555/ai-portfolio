@@ -27,7 +27,18 @@ const ContactInfo = () => (
 
     <div className="space-y-6">
       <InfoItem icon="envelope" color="blue" title="Email" value="mahadevmanerikar@gmail.com" />
+      <a href="tel:+917588373045" className="block">
+        <InfoItem icon="phone" color="green" title="Phone" value="+91 75883 73045" />
+      </a>
       <InfoItem icon="map-marker-alt" color="purple" title="Location" value="Pune, India" />
+      <a
+        href="https://linkedin.com/in/mahadev-manerikar-7636a3207/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block"
+      >
+        <InfoItem icon="linkedin-in" color="blue" title="LinkedIn" value="mahadev-manerikar" />
+      </a>
     </div>
 
 

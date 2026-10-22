@@ -3,9 +3,9 @@ import profileImage from "../../assets/image.jpeg";
 const About = () => {
   const details = [
     { icon: "map-marker-alt", color: "blue", title: "Location", value: "Pune, India" },
-    { icon: "briefcase", color: "purple", title: "Focus Areas", value: "AI Engineering & Full-Stack" },
-    { icon: "project-diagram", color: "green", title: "Projects", value: "10+ Completed" },
-    { icon: "code", color: "yellow", title: "Languages", value: "Python, JavaScript" }
+    { icon: "briefcase", color: "purple", title: "Experience", value: "AI Engineer, Equations Work" },
+    { icon: "project-diagram", color: "green", title: "Specialties", value: "Multi-agent systems & RAG" },
+    { icon: "code", color: "yellow", title: "Education", value: "B.E. Computer Engineering" }
   ]
 
   return (
@@ -23,11 +23,10 @@ const About = () => {
             </div>
           </div>
           <div className="md:w-2/3 md:pl-12">
-            <h3 className="text-2xl font-semibold mb-4">Innovating with Artificial Intelligence</h3>
+            <h3 className="text-2xl font-semibold mb-4">Production-ready AI, from retrieval to orchestration</h3>
             <p className="text-gray-300 mb-6">
-              I'm a passionate AI Engineer with strong backend and ML development experience. I specialize in building intelligent systems using Generative AI, LLM integrations, Robust Backend and Security.
+              I'm an AI Engineer building production-grade multi-agent orchestration and Retrieval-Augmented Generation (RAG) systems on Azure. My work spans agent evaluation and observability, hybrid retrieval, distributed tracing, event-driven backends, and latency optimization. Ireceived the Unstoppable Contributor Award for my contributions.
             </p>
-            {/* ...existing about text... */}
             <div className="grid grid-cols-2 gap-4">
               {details.map((detail, index) => (
                 <div key={index} className="flex items-center">

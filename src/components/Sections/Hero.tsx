@@ -25,8 +25,8 @@ const Hero = () => {
             AI Engineer
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 text-center md:text-left">
-            Building intelligent systems with Gen AI and scalable
-            backends in Pune, India
+            Building production-grade AI agents and RAG systems on Azure.
+            Based in Pune, India.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 w-full justify-center md:justify-start">
             <a
@@ -67,6 +67,12 @@ const Hero = () => {
               hoverColor="hover:bg-red-500"
               label="Email"
             />
+            <SocialLink
+              href="tel:+917588373045"
+              icon="phone"
+              hoverColor="hover:bg-green-600"
+              label="Phone"
+            />
           </div>
         </div>
         <div className="md:w-1/2 w-full flex justify-center min-w-0">
@@ -105,7 +111,7 @@ const SocialLink = ({
   >
     <i
       className={`${
-        icon === "envelope" ? "fa-solid" : "fa-brands"
+        icon === "envelope" || icon === "phone" ? "fa-solid" : "fa-brands"
       } fa-${icon} text-lg`}
     ></i>
   </a>

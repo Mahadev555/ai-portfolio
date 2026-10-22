@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <span className="text-xl font-bold gradient-text">Mahadev Manerikar</span>
-            <p className="text-gray-400 text-sm mt-1">AI Engineer & Full-Stack Developer</p>
+            <p className="text-gray-400 text-sm mt-1">AI Engineer | Multi-agent Systems & RAG</p>
           </div>
           <div className="flex space-x-6">
             {socialLinks.map((link, index) => (
