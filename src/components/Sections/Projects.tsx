@@ -3,6 +3,7 @@ interface Project {
   title: string
   description: string
   technologies: string[]
+  githubUrl?: string
 }
 
 const projects: Project[] = [
@@ -12,6 +13,7 @@ const projects: Project[] = [
     description:
       'A multi-user platform where agent and team configurations live in a database and are assembled at runtime. Users can configure tools and models, compose coordinated teams, and share agents without redeploying. Runs stream over SSE and record status, token usage, and duration.',
     technologies: ['Agno', 'FastAPI', 'React', 'PostgreSQL', 'SSE'],
+    githubUrl: 'https://github.com/Mahadev555/Agno-Hub',
   },
   {
     icon: 'file-lines',
@@ -19,6 +21,7 @@ const projects: Project[] = [
     description:
       'A multimodal document-search platform for PDFs containing diagrams, flowcharts, and screenshots. It analyzes extracted images, preserves their context during chunking, and returns answers with cited pages and source images.',
     technologies: ['RAG', 'Python', 'Vision Models', 'Vector Search', 'SSE'],
+    githubUrl: 'https://github.com/Mahadev555/docvision-rag',
   },
   {
     icon: 'ticket',
@@ -26,6 +29,23 @@ const projects: Project[] = [
     description:
       'An MCP server that exposes ServiceNow ticket workflows to AI agents through create, retrieve, update, and delete operations, with both stdio and SSE transports.',
     technologies: ['Python', 'MCP', 'SSE', 'ServiceNow'],
+    githubUrl: 'https://github.com/Mahadev555/ServiceNow-MCP',
+  },
+  {
+    icon: 'comments',
+    title: 'Agentic RAG',
+    description:
+      'A document-processing and question-answering application combining retrieval-augmented generation with agent workflows.',
+    technologies: ['RAG', 'Agno', 'FastAPI', 'Google Gemini'],
+    githubUrl: 'https://github.com/Mahadev555/AgenticRAG',
+  },
+  {
+    icon: 'people-group',
+    title: 'Query-Verse',
+    description:
+      'A Q&A platform that supports knowledge sharing and mentoring between senior and junior students.',
+    technologies: ['Node.js', 'React', 'MongoDB', 'Gemini', 'Express.js'],
+    githubUrl: 'https://github.com/Mahadev555/QueryVerseBackend',
   },
 ]
 
@@ -36,7 +56,7 @@ const Projects = () => (
         Selected <span className="gradient-text">Projects</span>
       </h2>
       <p className="text-gray-400 text-center mb-16">
-        Independent products and tools I have built.
+        Products and tools I have built.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project) => (
@@ -44,7 +64,23 @@ const Projects = () => (
             key={project.title}
             className="project-card rounded-xl p-6 border border-gray-700 hover:border-blue-400 transition duration-300 card-hover"
           >
-            <i className={`fas fa-${project.icon} text-3xl text-blue-400 mb-3`} aria-hidden="true"></i>
+            <div className="flex justify-between items-start mb-3">
+              <i
+                className={`fas fa-${project.icon} text-3xl text-blue-400`}
+                aria-hidden="true"
+              ></i>
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${project.title} on GitHub`}
+                  className="text-gray-400 hover:text-blue-400 transition duration-300"
+                >
+                  <i className="fab fa-github text-xl" aria-hidden="true"></i>
+                </a>
+              )}
+            </div>
             <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
             <p className="text-gray-300 mb-4">{project.description}</p>
             <div className="flex flex-wrap gap-2">
