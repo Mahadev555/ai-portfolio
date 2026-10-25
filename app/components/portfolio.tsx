@@ -475,6 +475,18 @@ const terminalHelpOutput = [
   "Available: help, clear, " + commands.map(({ label }) => label).join(", "),
 ];
 
+function getExperienceDuration(date: Date): string {
+  const startYear = 2024;
+  const startMonth = 2;
+  const startDay = 1;
+  let totalMonths = Math.max(0, (date.getFullYear() - startYear) * 12 + date.getMonth() - startMonth);
+  if (date.getDate() < startDay) totalMonths = Math.max(0, totalMonths - 1);
+
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
+  return `${years} ${years === 1 ? "year" : "years"} ${months} ${months === 1 ? "month" : "months"}`;
+}
+
 function SectionHeading({
   eyebrow,
   title,
@@ -574,6 +586,7 @@ function ContactForm() {
 
 export default function Portfolio() {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
+  const [experienceDuration, setExperienceDuration] = useState("...");
   const [activeView, setActiveView] = useState<View>("home");
   const [activeBottomTab, setActiveBottomTab] = useState<BottomTab>("TERMINAL");
   const [terminalInput, setTerminalInput] = useState("");
@@ -587,6 +600,10 @@ export default function Portfolio() {
   const paletteInput = useRef<HTMLInputElement>(null);
   const editorRef = useRef<HTMLDivElement>(null);
   const reduceMotion = useReducedMotion();
+
+  useEffect(() => {
+    setExperienceDuration(getExperienceDuration(new Date()));
+  }, []);
 
   useEffect(() => {
     const savedTheme = window.localStorage.getItem("portfolio-theme-v2");
@@ -814,7 +831,7 @@ export default function Portfolio() {
                   </div>
                 </div>
                 <div className="stats">
-                  <div className="stat"><strong>2.6+</strong><span>Years building</span></div>
+                  <div className="stat"><strong>{experienceDuration}</strong><span>Building since Mar 2024</span></div>
                   <div className="stat"><strong>2K+</strong><span>Documents ingested</span></div>
                   <div className="stat"><strong>60%</strong><span>Latency reduction · 15s to 6s</span></div>
                   <div className="stat"><strong>Azure</strong><span>Production cloud</span></div>
