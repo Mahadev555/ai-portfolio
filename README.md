@@ -1,94 +1,55 @@
+# Mahadev Manerikar — AI Engineer Portfolio
 
+A VS Code-inspired portfolio showcasing my work in AI engineering, agent orchestration, RAG, Azure, and backend development. Built with Next.js, React, TypeScript, Tailwind CSS, Framer Motion, and Lucide.
 
-# 🌐 Portfolio-2025
+## Features
 
-A modern and responsive personal portfolio website built using **React**, **Vite**, **TypeScript**, and **Tailwind CSS**.  
-This project is designed to showcase projects, skills, and experiences with a clean UI and fast performance.
+- VS Code-style workspace with Explorer, tabs, activity bar, terminal panel, and command palette
+- Responsive portfolio sections for experience, technical skills, projects, education, and contact
+- Persistent dark/light theme toggle (dark is the default)
+- Individual technology and Azure service icons
+- Contact form powered by Formspree
+- Resume download and links to GitHub and LinkedIn
 
----
+## Run locally
 
-## 🚀 Tech Stack
+### Requirements
 
-- ⚛️ **React 18** – Component-based UI  
-- ⚡ **Vite** – Lightning-fast build tool  
-- 🎨 **Tailwind CSS** – Utility-first CSS framework  
-- 📝 **TypeScript** – Type safety for scalability  
-- 🔍 **ESLint** – Code linting and quality checks  
-- 📦 **PostCSS** – CSS transformations  
+- Node.js 20.9 or newer
+- npm
 
----
+### Setup
 
-## 📂 Project Structure
+Clone the repository from its GitHub page, then run these commands from the project directory:
 
-```
-Portfolio-2025
-│── node_modules/         # Dependencies  
-│── src/                  # Source code  
-│── index.html            # Entry HTML  
-│── vite.config.ts        # Vite configuration  
-│── tailwind.config.js    # Tailwind config  
-│── tsconfig.json         # TypeScript config  
-│── package.json          # Dependencies and scripts  
-│── README.md             # Project documentation  
+```bash
+npm install
 ```
 
----
+The contact form uses the Formspree endpoint configured in the app by default. To override it for your own deployment, copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_FORMSPREE_ENDPOINT` to your Formspree form endpoint.
 
-## 🛠️ Installation & Setup
+```bash
+npm run dev
+```
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/portfolio-2025.git
-   cd portfolio-2025
-   ```
+Open [http://localhost:3000](http://localhost:3000).
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+## Available scripts
 
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run lint` | Run ESLint |
+| `npm run build` | Create a production build |
+| `npm run start` | Serve the production build |
 
-4. Build for production:
-   ```bash
-   npm run build
-   ```
+## Customize
 
-5. Preview the production build:
-   ```bash
-   npm run preview
-   ```
+- Portfolio content, navigation, project details, contact links, and resume URL: `app/components/portfolio.tsx`
+- Theme and responsive styles: `app/globals.css`
+- Profile image and skill logos: `public/`
+- Formspree endpoint: `.env.local` using `.env.example` as a template
 
----
+## License
 
-## 📸 Features
-
-- Responsive design (Mobile, Tablet, Desktop)  
-- Fast performance with **Vite**  
-- Dark/Light mode support (optional if added)  
-- Easy customization with Tailwind  
-- Modern UI components  
-
----
-
-## 📌 Roadmap
-
-- [ ] Add animations (Framer Motion)  
-- [ ] Connect with backend / API for projects  
-- [ ] Deploy to **Vercel / Netlify / GitHub Pages**  
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License** – feel free to use and modify for your own portfolio.
-
----
-
-## 👨‍💻 Author
-
-**Mahadev Manerikar**  
-🔗 [LinkedIn](http://linkedin.com/in/mahadev-manerikar-7636a3207/) 
+The project source code is available under the MIT License. See [LICENSE](./LICENSE). Third-party logos, libraries, and other assets remain subject to their respective licenses; personal content and imagery are not relicensed by this notice.

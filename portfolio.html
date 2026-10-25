@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mahadev Manerikar | AI Engineer Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0e16;--p:#0c121c;--c:#0f1621;--b:#1b2333;--t:#e6edf3;--m:#8b98a9;--s:#b6c2d2;--bl:#2f6fed;--lb:#5b9bff;--g:#34d399;--pu:#a78bfa;--or:#f59e0b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--t);font:13px/1.5 Inter,system-ui,sans-serif;overflow-x:hidden}
+.mono,#term,.cmd,kbd{font-family:"JetBrains Mono",Consolas,monospace}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--lb);outline-offset:2px}
+#tb{height:46px;background:var(--p);border-bottom:1px solid var(--b);display:flex;align-items:center;gap:14px;padding:0 14px}
+.dots i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px}
+.logo{font-weight:700;font-size:19px;margin-left:4px}.tt b{display:block;font-size:12px;letter-spacing:.4px}.tt small{font-size:9.5px;color:var(--m);letter-spacing:.5px}
+#sbx{flex:0 1 660px;margin:0 auto;height:28px;border:1px solid var(--b);background:var(--bg);border-radius:7px;color:var(--m);text-align:left;padding:0 12px;font-size:12px}
+.on{border:1px solid #14513c;background:#0f2a22;color:var(--g);border-radius:14px;padding:4px 12px;font-size:12px;font-weight:500}.on:before{content:"";display:inline-block;width:8px;height:8px;background:var(--g);border-radius:50%;margin-right:7px}
+#app{display:grid;grid-template-columns:48px 202px minmax(0,1fr) 340px;grid-template-rows:minmax(0,1fr) 240px;height:max(calc(100vh - 72px),952px)}
+#ab{grid-row:1/3;background:#090d15;border-right:1px solid var(--b);display:flex;flex-direction:column;align-items:center;padding-top:12px;gap:14px}
+#ab span{width:30px;height:30px;display:grid;place-items:center;border-radius:6px;color:var(--m);font-size:17px}#ab span:first-child{color:var(--lb);box-shadow:-9px 0 0 -7px var(--lb)}#ab .us{margin-top:auto;margin-bottom:12px}
+#ex{background:var(--p);border-right:1px solid var(--b);overflow:auto;padding:8px 0}
+.eh{padding:4px 18px 10px;font-size:11px;letter-spacing:.8px;color:var(--s);font-weight:500;display:flex;justify-content:space-between}
+.tr{overflow:hidden;text-overflow:ellipsis;display:flex;align-items:center;gap:7px;width:100%;padding:3px 12px;color:var(--s);font-size:12.5px;text-align:left;height:24px;white-space:nowrap}.tr:hover{background:#111a29}.tr.a{background:#16233d;color:#fff;box-shadow:inset 2px 0 var(--lb)}
+.tr .ic{width:13px;height:13px;border-radius:3px;border:1.5px solid var(--lb);flex:none}.tr .fo{width:15px;height:11px;border-radius:2px;background:var(--lb);flex:none}.tr .cv{color:var(--m);font-size:9px;width:8px}
+.sec{font-size:11px;font-weight:600;color:var(--s);padding:8px 12px 4px;letter-spacing:.4px}
+#mn{display:flex;flex-direction:column;min-width:0;border-right:1px solid var(--b)}
+#tabs{display:flex;background:var(--p);border-bottom:1px solid var(--b);overflow-x:auto;flex:none}
+.tab{padding:0 16px;height:39px;display:flex;align-items:center;gap:9px;color:var(--m);border-right:1px solid var(--b);white-space:nowrap;font-size:12.5px;border-top:2px solid transparent}.tab.a{background:var(--bg);color:#fff;border-top-color:var(--lb)}.tab:before{content:"";width:12px;height:12px;border:1.5px solid #6d7dff;border-radius:3px}.tab.a:before{border-color:var(--lb)}.tab em{font-style:normal;color:var(--m);margin-left:6px}
+#mnav{display:none}
+#pg{overflow:auto;flex:1}
+.pad{padding:0 38px 28px}
+.hero{position:relative;padding:34px 38px 28px;background:linear-gradient(90deg,var(--bg) 22%,rgba(10,14,22,0) 68%),linear-gradient(0deg,var(--bg),rgba(10,14,22,0) 22%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 676 401' preserveAspectRatio='xMaxYMax slice'%3E%3Cdefs%3E%3ClinearGradient id='s' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23171631'/%3E%3Cstop offset='.5' stop-color='%235b3358'/%3E%3Cstop offset='.78' stop-color='%23d9693a'/%3E%3Cstop offset='1' stop-color='%23f2a75a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='676' height='401' fill='url(%23s)'/%3E%3Cpolygon points='0,330 90,262 170,296 250,200 330,246 420,150 520,200 600,230 676,190 676,401 0,401' fill='%2346354f'/%3E%3Cpolygon points='100,401 290,250 360,285 470,92 560,240 640,285 676,300 676,401' fill='%23221e33'/%3E%3Cpolygon points='470,92 436,160 470,142 505,170' fill='%23d9c3cf' opacity='.65'/%3E%3Cpolygon points='0,401 0,352 150,322 300,362 450,332 676,364 676,401' fill='%230f121b'/%3E%3C/svg%3E") right/cover no-repeat}
+.hero .k{color:var(--g);font-size:13.5px}.hero h2{font-size:34px;font-weight:500;margin-top:30px;line-height:1.1}
+.hero h1{font-size:clamp(34px,4.6vw,56px);line-height:1.15;font-weight:700;background:linear-gradient(90deg,var(--pu),#3b82f6);-webkit-background-clip:text;background-clip:text;color:transparent;width:max-content;max-width:100%}
+.lead{border-left:2px solid var(--lb);padding-left:10px;font-size:18px;color:var(--s);max-width:540px;margin:18px 0 22px;line-height:1.5}
+.btns{display:flex;gap:14px;flex-wrap:wrap}.btn{height:41px;padding:0 20px;border-radius:6px;border:1px solid #2a3548;background:#0f1621;font-weight:500;font-size:13.5px;display:inline-flex;align-items:center;gap:8px}.btn.pr{background:var(--bl);border-color:var(--bl);color:#fff}.btn:hover{filter:brightness(1.15)}
+.qt,.loc{position:absolute;right:23px;background:rgba(18,26,42,.9);border:1px solid var(--b);border-radius:10px;padding:14px;font-size:13px}.qt{top:25px;width:237px}.qt small{display:block;color:var(--m);margin-top:10px;font-size:12px}.loc{top:132px;width:149px;font-size:11px;padding:10px}.loc small{display:block;color:var(--m);font-size:10.5px}.loc:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--g);margin-right:7px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:26px}.st{background:rgba(14,21,32,.92);border:1px solid var(--b);border-radius:8px;padding:12px 17px}.st b{font-size:22px;font-weight:500;display:block}.st span{color:var(--m);font-size:13.5px}
+.fh{display:flex;justify-content:space-between;align-items:center;padding:20px 25px 12px;border-top:1px solid var(--b)}.fh h3{font:500 17px "JetBrains Mono",monospace}.fh a,.lk{color:var(--lb);font-size:12px;cursor:pointer}
+.g4{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:14px;padding:0 25px 22px}
+.cd{background:#0e1520;border:1px solid var(--b);border-radius:10px;padding:13px 14px;position:relative;display:flex;flex-direction:column;gap:8px}.cd h4{font-size:14.5px;font-weight:600}.cd p{color:var(--m);font-size:12px;line-height:1.5;flex:1}.cd:hover{border-color:#2a4a85}
+.pi{width:38px;height:38px;border-radius:9px;display:grid;place-items:center;font-weight:700;font-size:12px;border:1px solid}
+.ch{display:flex;gap:6px;flex-wrap:wrap}.ch i{font-style:normal;background:#161f30;border:1px solid var(--b);border-radius:6px;padding:3px 9px;font-size:11px;color:var(--s)}
+.kb{position:absolute;right:12px;top:14px;color:var(--m)}
+#rt{background:var(--p);overflow:auto;display:flex;flex-direction:column}
+.ph{display:flex;align-items:center;gap:8px;padding:12px 14px 10px;font-size:11px;font-weight:600;letter-spacing:.6px;color:var(--s);text-transform:uppercase}.ph .r{margin-left:auto;font-weight:400;color:var(--m)}.ph .bt{background:#162a52;border:1px solid #22407a;color:var(--lb);border-radius:5px;padding:0 6px;font-size:9px}
+#ai{padding:0 11px 12px}.ask{display:flex;align-items:center;border:1px solid var(--b);background:#0e1520;border-radius:8px;padding:6px 12px}.ask input{flex:1;background:none;border:0;color:var(--t);font:12.5px Inter;outline:0;padding:9px 0}.ask b{color:var(--s)}
+.try{color:var(--m);font-size:12px;margin:12px 0 7px}.cm{display:flex;align-items:center;gap:12px;width:100%;border:1px solid var(--b);background:#0e1520;border-radius:6px;height:36px;padding:0 12px;margin-bottom:1.5px;text-align:left;font-size:11.5px;color:var(--m)}.cm i{width:14px;height:14px;border:1.5px solid var(--lb);border-radius:4px;flex:none}.cm .cmd{color:var(--lb);width:78px;font-size:10.5px}.cm span:last-child{margin-left:auto}.cm:hover{border-color:#2a4a85}
+.cs{padding:0 11px 14px}.cs button{display:block;width:100%;text-align:left;background:#0e1520;border:1px solid var(--b);border-radius:8px;padding:10px 12px;margin-bottom:8px}.cs button:hover{border-color:#2a4a85}.cs b{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:600}.cs b:before{content:"";width:8px;height:8px;border-radius:2px;background:var(--c1)}.cs p{color:var(--m);font-size:11.5px;margin:3px 0 0 17px}
+.rl{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding:14px 38px 10px}.rl h3{font-size:18px}.rl span{color:var(--g);font-size:12px}
+.wd{display:grid;gap:16px;padding:0 38px 20px}.dh{display:flex;align-items:center;gap:12px}.dh h4{font-size:16px}.cd[id]{scroll-margin-top:14px}.hit{border-color:var(--lb)!important;box-shadow:0 0 0 1px var(--lb)}
+.tab{padding:0 6px 0 0;gap:0}.tab:before{display:none}.tab button{padding:0 8px 0 16px;height:100%;color:inherit;display:flex;align-items:center;gap:9px}.tab button:before{content:"";width:12px;height:12px;border:1.5px solid #6d7dff;border-radius:3px}.tab.a button:before{border-color:var(--lb)}.tab em{cursor:pointer;padding:0 6px;margin:0}.tab em:hover{color:#fff}
+#bt{grid-column:2/5;display:grid;grid-template-columns:1.7fr 1.05fr .9fr;border-top:1px solid var(--b);background:var(--p);min-height:0}
+#bt>div{overflow:auto;border-right:1px solid var(--b);min-width:0}
+.tt2{display:flex;gap:22px;padding:11px 18px 0;font-size:10.5px;color:var(--m)}.tt2 .a{color:#fff;border-bottom:2px solid var(--lb);padding-bottom:6px}
+#term{font-size:12px;line-height:1.28;padding:12px 18px;white-space:pre-wrap;color:var(--s)}#term .pr{color:var(--g)}#term .cb{color:var(--lb)}#term .w{color:var(--t)}.ti{display:flex;gap:10px;color:var(--g)}.ti input{flex:1;background:none;border:0;color:var(--t);font:12px "JetBrains Mono",monospace;outline:0}
+.sg{display:grid;grid-template-columns:repeat(5,1fr);gap:14px 4px;padding:6px 12px}.sk{text-align:center;font-size:10.5px;color:var(--s)}.sk b{display:grid;place-items:center;width:34px;height:34px;margin:0 auto 5px;border-radius:9px;font-size:11px;border:1px solid;font-weight:700}
+.act{position:relative;padding:0 16px}.act:before{content:"";position:absolute;left:21px;top:12px;bottom:26px;width:1px;background:var(--b)}.ai{position:relative;display:flex;align-items:center;gap:12px;padding:7px 0 7px 14px;font-size:11.5px}.ai:before{content:"";position:absolute;left:0;width:9px;height:9px;border-radius:50%;background:var(--p);border:1.5px solid var(--c1)}.ai b{width:13px;height:13px;border:1.5px solid var(--c1);border-radius:3px;flex:none}.ai small{margin-left:auto;color:var(--m);font-size:10px;white-space:nowrap}.ai u{text-decoration:none;color:var(--lb)}
+#sb{height:26px;background:var(--p);border-top:1px solid var(--b);display:flex;gap:16px;align-items:center;padding:0 14px;color:var(--m);font-size:11.5px}#sb b{font-weight:400;color:var(--s)}
+.h1p{padding:32px 38px 6px}.h1p small{color:var(--g)}.h1p h1{font-size:34px;margin:2px 0 6px}.h1p p{color:var(--m);max-width:620px}
+.tl{position:relative;margin:14px 38px 0 52px;border-left:1px solid var(--b);padding-left:26px}.tl .cd{margin-bottom:16px}.tl .cd:before{content:"";position:absolute;left:-33px;top:20px;width:11px;height:11px;border-radius:50%;background:var(--lb);border:2px solid var(--bg)}.tl h4{font-size:17px}.tl .when{color:var(--g);font-size:12px}
+.cd ul{margin-left:16px;color:var(--s);font-size:12.5px;display:grid;gap:5px}
+.sgp{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;padding:6px 38px 28px}
+.fl{display:flex;align-items:stretch;gap:0;padding:8px 38px;flex-wrap:wrap}.fl .col{flex:1;min-width:170px;display:grid;gap:8px;align-content:start}.fl .col>small{font:11px "JetBrains Mono",monospace;color:var(--m)}.fl .bx{background:#0e1520;border:1px solid var(--b);border-radius:8px;padding:10px 12px;font-weight:500}.fl .bx.h{background:#16264a;border-color:var(--lb)}.fl .ar{width:40px;display:grid;place-items:center;color:var(--lb);font-size:22px}
+.ct{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;padding:10px 38px}.ct a{display:block}.ct small{color:var(--m);font:11px "JetBrains Mono",monospace}.ct b{font-size:16px;font-weight:500;word-break:break-all}
+#pal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;justify-content:center;padding-top:12vh;z-index:9}#pal.o{display:flex}#pal>div{width:min(560px,92vw);background:var(--p);border:1px solid var(--b);border-radius:10px;height:max-content;overflow:hidden}#pal input{width:100%;background:var(--bg);border:0;border-bottom:1px solid var(--b);color:var(--t);padding:14px;font:14px Inter;outline:0}#pal button{display:block;width:100%;text-align:left;padding:9px 14px;color:var(--s)}#pal button.a,#pal button:hover{background:#16233d;color:#fff}
+@media(max-width:1000px){#app{display:block;height:auto}#ab,#ex,.kb{display:none}#mnav{display:flex;gap:8px;overflow-x:auto;padding:8px 12px;background:var(--p);border-bottom:1px solid var(--b)}#mnav button{border:1px solid var(--b);border-radius:14px;padding:5px 12px;white-space:nowrap;color:var(--s)}#mnav .a{background:var(--bl);color:#fff;border-color:var(--bl)}#tabs{display:none}#pg{overflow:visible}.qt,.loc{position:static;margin:14px 0 0;width:auto}.hero{background-position:center}.stats{grid-template-columns:1fr 1fr}#bt{display:block}#bt>div{border-right:0;border-bottom:1px solid var(--b);max-height:340px}.hero,.pad,.h1p{padding-left:16px;padding-right:16px}.tl{margin:14px 14px 0 24px}.sgp,.ct,.fl{padding-left:16px;padding-right:16px}.g4{padding:0 14px 20px}#sbx span{display:none}}
+@media(prefers-reduced-motion:reduce){.wv i{animation:none}}
+</style>
+</head>
+<body>
+<header id="tb">
+ <div class="dots"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></div>
+ <div class="logo">MM</div><div class="tt"><b>MAHADEV MANERIKAR</b><small>AI ENGINEER PORTFOLIO</small></div>
+ <button id="sbx">&#9906;&nbsp; <span>Search projects, skills, or type a command (Ctrl+K)...</span></button>
+ <span class="on">Online</span>
+</header>
+<div id="app">
+ <nav id="ab" aria-label="Activity"><span>&#10064;</span><span>&#9906;</span><span>&#9095;</span><span>&#9638;</span><span>&#9733;</span><span>&#9636;</span><span class="us">&#9786;</span></nav>
+ <aside id="ex" aria-label="Explorer"></aside>
+ <section id="mn"><div id="tabs" role="tablist"></div><div id="mnav"></div><div id="pg"></div></section>
+ <aside id="rt">
+  <div class="ph"><span style="color:var(--lb)">&#10070;</span>AI Assistant <span class="bt">BETA</span><span class="r">&middot;&middot;&middot;</span></div>
+  <div id="ai"><div class="ask"><input id="q" placeholder="Ask me anything about my work, projects or experience..." aria-label="Ask"><b>&rsaquo;</b></div><div class="try">Try these commands:</div><div id="cmds"></div></div>
+  <div class="ss2" style="border-top:1px solid var(--b)"><div class="ph"><span style="color:var(--lb)">&#9670;</span>Core Skills<span class="r">click to open</span></div><div class="cs" id="core"></div></div>
+ </aside>
+ <div id="bt">
+  <div><div class="tt2"><span class="a">TERMINAL</span><span>OUTPUT</span><span>PROBLEMS</span><span>DEBUG CONSOLE</span><span>PORTS</span><span>GITLENS</span></div><div id="term"></div></div>
+  <div><div class="ph"><span style="color:var(--lb)">&#9638;</span>Skills &amp; Tech Stack</div><div class="sg" id="sg"></div></div>
+  <div style="border:0"><div class="ph"><span style="color:var(--lb)">&#9719;</span>Recent Activity</div><div class="act" id="act"></div></div>
+ </div>
+</div>
+<footer id="sb"><b>&#9095; main</b><span>&#8855; 0 &nbsp;&#9888; 0 &nbsp;&#9888; 0</span></footer>
+<div id="pal"><div><input id="pi" placeholder="Go to page or run a command..." aria-label="Command palette"><div id="pl"></div></div></div>
+
+<script>
+const $=(s,e=document)=>e.querySelector(s);
+const GH="https://github.com/mahadev555",LI="https://www.linkedin.com/in/mahadev-manerikar/",EM="mailto:mahadevmanerikar@gmail.com",CV="MahadevManerikar_AI_Engineer_V33.pdf";
+const FEAT=[
+["Bray AI Chatbot","Enterprise RAG assistant with document ingestion, contextual retrieval and multi-agent workflows.",["RAG","Azure","FastAPI"],"#3b5bdb","BR","experience.md#bray"],
+["AI Movie Recommendation","Multi-agent platform with LangGraph and Azure AI Foundry. Reduced latency from 25s to 12s.",["Agents","Node.js","Azure"],"#22a06b","MR","projects.tsx#movie"],
+["ServiceNow AI Platform","Cloud support automation using FastAPI, WebSocket streaming and agentic workflows.",["FastAPI","MCP","Automation"],"#e8590c","SN","experience.md#ccp"],
+["SmartCap","AI ETL & investor intelligence platform with automated Excel and PowerPoint reporting.",["Agents","Financial AI","Azure"],"#7048e8","SC","experience.md#smartcap"]];
+const WORK1=[
+["avs","Accenture AVS: Agentic Content Recommendation Platform","#2f6fed","AV",["LangChain","Azure AI Foundry","Azure AI Search","Cosmos DB"],[
+"Delivered the Content Discovery Workflow to production with Microsoft and Accenture stakeholders, moving it from Azure AI Foundry hosted agents to merged LangChain agents and cutting response time from 15s to 6s.",
+"Created an LLM-as-a-judge evaluation framework for the search, context, intent and instructor agents, plus a hallucination-measurement script; the search tool's hallucination rate fell from 8.2% to 2.2%.",
+"Set up the Azure AI Search layer (semantic indexes, language-based index selection) and Cosmos DB conversation state; added per-agent token and cost tracking in Application Insights.",
+"Fixed a production timeout on the conversation API (30s limit with millions of records) using cursor-based pagination.",
+"Extended the agents with a web-search tool, a live-event agent, and English and Italian search agents; published reusable AVS-Shared packages to a private Nexus registry."]],
+["ccp","Accenture Continuum Control Plane: ServiceNow Automation","#e8590c","CC",["LangGraph","MCP","Semantic Kernel","Azure"],[
+"Built a unified AI orchestration platform that helps Cloud Support Engineers resolve incidents faster, fed by Splunk logs and ServiceNow incidents through dedicated MCP servers.",
+"Designed specialist agents on Azure AI Foundry and LangGraph (log analysis, incident similarity, root cause analysis, severity scoring, ticket updates, email notifications) coordinated by a central Orchestrator Agent.",
+"Added guardrails for data leakage and unsafe outputs, plus Azure AI Content Safety grounding verification.",
+"Python ServiceNow MCP servers (SSE, stdio) run on App Service behind APIM; Logic Apps handle mail and ticket updates.",
+"Set up the PostgreSQL and Cosmos DB data layer (Managed Identity, Key Vault), MSAL authentication, WebSocket streaming for agent chat, and OpenTelemetry, Azure Monitor and Splunk logging."]],
+["bray","Bray Chatbot: Enterprise RAG Assistant","#3b5bdb","BR",["RAG","Azure Functions","Blob Storage"],[
+"Designed a hybrid retrieval (vector and keyword) RAG pipeline over 1K+ enterprise documents, improving relevance and reducing hallucinations.",
+"Automated document ingestion with Azure Functions and Blob Storage to keep the index in sync."]],
+["smartcap","SmartCap: Property Search Platform","#7048e8","SC",["Agents","ETL","Docker","Azure DevOps"],[
+"Developed an AI investor intelligence platform whose agents extract insights from financial and property data, supported by ETL and ranking pipelines.",
+"Automated investor-ready report generation with GenAI pipelines, saving 8+ manual hours per week.",
+"Secured with MSAL and Key Vault; containerized with Docker and shipped via Azure DevOps CI/CD."]]];
+const WORK2=[
+["salescoach","AI Salescoach POC (Bray / Microsoft)","#0ea5b7","SA",["Azure AI Foundry","Logic Apps","Dynamics 365"],[
+"Created three agents on Azure AI Foundry: Salescoach Orchestrator, Sentiment Analysis Agent and Mail Sender Agent.",
+"Wrote Logic Apps that fetch Dynamics 365 and SQL Server data and save email activity back to Dynamics 365.",
+"Presented the stakeholder demo, joined hackathon calls with the Microsoft and Bray teams, and documented the architecture and flow."]],
+["mahindra","Mahindra Service Tracking POC","#f59e0b","MS",["PostgreSQL","Real-time","Dashboard"],[
+"Developed a real-time vehicle monitoring application with live tracking, automated email notifications and a dashboard that refreshes as events arrive.",
+"Wrote a PostgreSQL stored procedure to calculate how long vehicles spend in each zone."]]];
+const PERS=[
+["movie","AI Movie Recommendation","#22a06b","MR",["LangGraph","Azure AI Foundry","Node.js"],[
+"Multi-agent recommendation platform built with LangGraph and Azure AI Foundry.","Reduced response latency from 25s to 12s."]],
+["agno","agno-agents-hub: Agent Orchestration Platform","#0ea5b7","AG",["Agno","SSE","Multi-user"],[
+"Architected a multi-user platform where agents are data, not code: configs live in the database and become live agents at request time, so agents and teams can be created, edited and shared via API without redeploying.",
+"Users define agents (name, role, instructions, tools, model settings; validated on save) and compose teams from a coordinator plus ordered members.",
+"Runs execute outside the HTTP request and stream output over SSE; each run records status, token usage and duration, with per-user ownership and public/private visibility."]],
+["docvision","DocVision-RAG: Multimodal RAG","#d946a8","DV",["Vision model","RAG","SSE"],[
+"Developed a multimodal RAG platform that makes PDF diagrams, flowcharts and screenshots searchable.",
+"Converted PDFs to Markdown, ran a vision model on each extracted image, and injected the analysis back at the image's original position before chunking.",
+"Header-aware chunking and cosine vector search return answers with cited pages and source images, with async ingestion and SSE-streamed chat."]],
+["snmcp","ServiceNow MCP Server with SSE","#f59e0b","MC",["MCP","SSE","CRUD APIs"],[
+"Created an MCP server exposing ServiceNow ticket workflows to AI agents through CRUD APIs and real-time SSE streaming, making agent integrations quicker to set up."]]];
+const SKG=[
+["sk-ai","AI & Agents","#5b9bff",["LLMs","Prompt Engineering","RAG","Embeddings & Vector Search","Agentic & Multi-Agent Systems","LangGraph","LangChain","MCP","Microsoft Agent Framework","Agno","Azure AI Foundry","Guardrails"]],
+["sk-be","Backend","#a78bfa",["FastAPI","REST APIs","Node.js","React","WebSockets","SSE","SQLAlchemy"]],
+["sk-cloud","Cloud & DevOps","#f59e0b",["Azure Container Apps","Azure Functions","Logic Apps","App Service","APIM","Key Vault","Managed Identity","MSAL","Blob Storage","Docker","Azure DevOps CI/CD"]],
+["sk-data","Data & Search","#34d399",["PostgreSQL","SQL Server","Cosmos DB","Azure AI Search","PGVector"]],
+["sk-eval","Eval & Observability","#f472b6",["LLM-as-a-Judge","Azure AI Evaluation SDK","Relevance/Groundedness Metrics","OpenTelemetry","Azure Application Insights","Cost & Latency Tracing"]],
+["sk-lang","Languages","#22d3ee",["Python","JavaScript","TypeScript","SQL"]]];
+const CORE=[["AI Agents & Orchestration","LangGraph, LangChain, MCP, Microsoft Agent Framework","sk-ai","#5b9bff"],["RAG & Retrieval","Hybrid search, Azure AI Search, PGVector, embeddings","sk-data","#34d399"],["Backend APIs","Python, FastAPI, WebSockets, SSE, Node.js","sk-be","#a78bfa"],["Azure Cloud","AI Foundry, Container Apps, Functions, APIM, Key Vault","sk-cloud","#f59e0b"],["Evaluation & Observability","LLM-as-a-Judge, OpenTelemetry, Application Insights","sk-eval","#f472b6"]];
+const SK=[["Python","Py","#4b8bf5"],["FastAPI","API","#14b8a6"],["Node.js","JS","#4ade80"],["React","Re","#38bdf8"],["Azure","Az","#3b82f6"],["LangGraph","LG","#e5e7eb"],["Azure AI","AI","#38bdf8"],["RAG","RAG","#8b7bff"],["PostgreSQL","PG","#60a5fa"],["Docker","Dk","#38bdf8"],["MCP","MCP","#f472b6"],["WebSockets","WS","#a78bfa"],["CI/CD","CI","#8b7bff"],["Cosmos DB","DB","#38bdf8"],["JavaScript","JS","#facc15"]];
+const ACT=[["Pushed updates to <u>agno-agents-hub</u>","2 hours ago","#f87171"],["Updated project documentation","5 hours ago","#5b9bff"],["Explored new Azure AI features","1 day ago","#8b7bff"],["Built new agent workflow","2 days ago","#f87171"],["Improved RAG retrieval pipeline","3 days ago","#f472b6"]];
+const CMD=[["/projects","Show all projects","projects.tsx"],["/stack","My tech stack","skills.md"],["/experience","Work experience","experience.md"],["/education","Education & awards","education.md"],["/resume","Download resume",""],["/contact","Get in touch","contact.md"]];
+const TREE=[
+["about",[["me.md","f","me.md"],["education.md","f","education.md"]]],
+["experience",[["experience.md","f","experience.md"],["accenture-avs.md","s","experience.md#avs"],["continuum-cp.md","s","experience.md#ccp"],["bray-chatbot.md","s","experience.md#bray"],["smartcap.md","s","experience.md#smartcap"],["salescoach-poc.md","s","experience.md#salescoach"],["mahindra-poc.md","s","experience.md#mahindra"]]],
+["projects",[["projects.tsx","f","projects.tsx"],["movie-recommend/","o","projects.tsx#movie"],["agno-agents-hub/","o","projects.tsx#agno"],["docvision-rag/","o","projects.tsx#docvision"],["servicenow-mcp/","o","projects.tsx#snmcp"]]],
+["skills",[["skills.md","f","skills.md"],["ai-agents.md","s","skills.md#sk-ai"],["backend.md","s","skills.md#sk-be"],["cloud-devops.md","s","skills.md#sk-cloud"],["data-search.md","s","skills.md#sk-data"],["evaluation.md","s","skills.md#sk-eval"],["languages.md","s","skills.md#sk-lang"]]],
+["contact",[["contact.md","f","contact.md"]]]];
+const FAV=[["Resume.pdf","#f87171",CV],["GitHub","#b6c2d2",GH],["LinkedIn","#5b9bff",LI],["Email Me","#5b9bff",EM]];
+const PAGES={"me.md":"home","education.md":"edu","experience.md":"exp","projects.tsx":"proj","skills.md":"skills","contact.md":"contact"};
+const NAV=[["me.md","Home"],["experience.md","Experience"],["projects.tsx","Projects"],["skills.md","Skills"],["education.md","Education"],["contact.md","Contact"]];
+let tabs=NAV.map(n=>n[0]),cur="me.md",anc="";const closed=new Set();
+const chips=a=>`<div class="ch">${a.map(x=>`<i>${x}</i>`).join("")}</div>`;
+const ico=(c,a)=>`<div class="pi" style="background:${c}33;border-color:${c};color:${c}">${a}</div>`;
+const fcard=p=>`<article class="cd"><span class="kb">&#8942;</span>${ico(p[3],p[4])}<h4>${p[0]}</h4><p>${p[1]}</p>${chips(p[2])}<a class="lk" data-go="${p[5]}">View Project &rarr;</a></article>`;
+const dcard=p=>`<article class="cd" id="${p[0]}"><div class="dh">${ico(p[2],p[3])}<h4>${p[1]}</h4></div><ul>${p[5].map(b=>`<li>${b}</li>`).join("")}</ul>${chips(p[4])}</article>`;
+const head=(k,t,p)=>`<div class="h1p"><small class="mono">// ${k}</small><h1>${t}</h1><p>${p}</p></div>`;
+const role=(t,w)=>`<div class="rl"><h3>${t}</h3><span class="mono">${w}</span></div>`;
+const R={
+home:()=>`<div class="hero"><div class="qt">&ldquo;Turning ideas into AI systems that create real impact.&rdquo;<small>&mdash; Mahadev Manerikar</small></div><div class="loc">Pune, India<small>Available for opportunities</small></div>
+<p class="k mono">// AI Engineer | Backend-Focused Developer</p><h2>Hi, I&rsquo;m</h2><h1>Mahadev Manerikar</h1>
+<p class="lead">I build production-grade AI systems, multi-agent platforms and scalable backend APIs on Azure.</p>
+<div class="btns"><button class="btn pr" data-go="projects.tsx">View My Projects &rarr;</button><a class="btn" href="${CV}" download>&#10515; Download Resume</a><a class="btn" href="${GH}" target="_blank" rel="noopener">&#9711; GitHub</a></div>
+<div class="stats"><div class="st"><b>2.6+</b><span>Years Experience</span></div><div class="st"><b>10+</b><span>Projects</span></div><div class="st"><b>8+</b><span>Technologies</span></div><div class="st"><b>&infin;</b><span>Ideas to Build</span></div></div></div>
+<div class="fh"><h3>&#128193; Featured Projects</h3><a data-go="experience.md">View All &rarr;</a></div><div class="g4">${FEAT.map(fcard).join("")}</div>`,
+exp:()=>head("experience","Experience","Equations Work, Pune. Client projects are listed first, in the order I joined them.")+role("AI Engineer","Oct 2024 &ndash; Present")+`<div class="wd">${WORK1.map(dcard).join("")}</div>`+role("Trainee Software Engineer","Mar 2024 &ndash; Oct 2024")+`<div class="wd">${WORK2.map(dcard).join("")}</div>`,
+proj:()=>head("personal projects","Personal projects","Things I built on my own, separate from client work.")+`<div class="wd">${PERS.map(dcard).join("")}</div>`,
+skills:()=>head("skills","Skills","Everything I work with, grouped by area.")+`<div class="sgp">${SKG.map(g=>`<div class="cd" id="${g[0]}"><h4 style="color:${g[2]}">${g[1]}</h4>${chips(g[3])}</div>`).join("")}</div>`,
+edu:()=>head("education","Education & awards","")+`<div class="wd"><article class="cd" id="edu"><h4>B.E. Computer Engineering</h4><p>Zeal College of Engineering and Research, Pune &middot; 2020&ndash;2024 &middot; CGPA 8.90/10</p></article><article class="cd"><h4>HSC</h4><p>SVM &amp; Jr College of Science, Kudase, Sindhudurg &middot; 2018&ndash;2020 &middot; 77.23%</p></article><article class="cd"><h4>Unstoppable Contributor Award 2025&ndash;26</h4><p>Equations Work. Recognised for contributions to the Accenture AVS project: agent latency reduction, the evaluation framework and production defect resolution.</p></article><article class="cd"><h4>Certifications</h4><ul><li>Anthropic: Introduction to Model Context Protocol</li><li>DeepLearning.AI: LangChain for LLM Application Development (2024)</li></ul></article></div>`,
+contact:()=>head("contact","Let&rsquo;s build something that ships.","Open to AI engineering and backend roles. Email is the fastest way to reach me.")+`<div class="ct"><a class="cd" href="${EM}"><small>EMAIL</small><b>mahadevmanerikar@gmail.com</b></a><a class="cd" href="${LI}" target="_blank" rel="noopener"><small>LINKEDIN</small><b>linkedin.com/in/mahadev-manerikar</b></a><a class="cd" href="${GH}" target="_blank" rel="noopener"><small>GITHUB</small><b>github.com/mahadev555</b></a><a class="cd" href="${CV}" download><small>RESUME</small><b>Download PDF</b></a></div><p class="mono" style="color:var(--m);padding:14px 38px">Pune, India &nbsp;|&nbsp; +91 7588373045</p>`};
+function go(t){if(!t)return;const [f,a]=t.split("#");if(!tabs.includes(f))tabs.push(f);cur=f;anc=a||"";draw();const el=anc&&document.getElementById(anc);if(el){el.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth",block:"start"});el.classList.add("hit");setTimeout(()=>el.classList.remove("hit"),1600)}else $("#pg").scrollTop=0}
+function draw(){
+ $("#tabs").innerHTML=tabs.map(t=>`<div class="tab ${t===cur?"a":""}" role="tab"><button data-go="${t}">${t}</button>${tabs.length>1?`<em data-x="${t}" title="Close">&times;</em>`:""}</div>`).join("");
+ $("#mnav").innerHTML=NAV.map(n=>`<button class="${n[0]===cur?"a":""}" data-go="${n[0]}">${n[1]}</button>`).join("");
+ const sc=$("#pg").scrollTop;$("#pg").innerHTML=R[PAGES[cur]]();$("#pg").scrollTop=sc;
+ const key=cur+(anc?"#"+anc:"");
+ $("#ex").innerHTML=`<div class="eh"><span>EXPLORER</span><span>&middot;&middot;&middot;</span></div><div class="tr"><span class="cv">&#9660;</span><b style="font-size:11.5px">MAHADEV-PORTFOLIO</b></div>`+TREE.map(([n,k])=>{const o=!closed.has(n);return `<button class="tr" data-fold="${n}" style="padding-left:24px"><span class="cv">${o?"&#9660;":"&#9654;"}</span><span class="fo"></span>${n}</button>`+(o?k.map(([l,t,g])=>`<button class="tr ${g===key?"a":""}" style="padding-left:${t==="f"?46:54}px" data-go="${g}">${t==="o"?'<span class="fo"></span>':'<span class="ic"></span>'}${l}</button>`).join(""):"")}).join("")+`<div class="sec" style="margin-top:14px">&#9660; FAVORITES</div>`+FAV.map(([n,c,h])=>`<a class="tr" style="padding-left:30px" href="${h}" ${h.startsWith("http")?'target="_blank" rel="noopener"':"download"}><span class="ic" style="border-color:${c}"></span>${n}${h.startsWith("http")?' <span style="color:var(--m);font-size:10px">&nearr;</span>':""}</a>`).join("");
+}
+document.addEventListener("click",e=>{
+ const x=e.target.closest("[data-x]");if(x){const t=x.dataset.x,i=tabs.indexOf(t);tabs.splice(i,1);if(cur===t){cur=tabs[Math.max(0,i-1)];anc=""}draw();return}
+ const f=e.target.closest("[data-fold]");if(f){const n=f.dataset.fold;closed.has(n)?closed.delete(n):closed.add(n);draw();return}
+ const g=e.target.closest("[data-go]");if(g){$("#pal").classList.remove("o");go(g.dataset.go)}});
+$("#cmds").innerHTML=CMD.map(c=>c[2]?`<button class="cm" data-go="${c[2]}"><i></i><span class="cmd">${c[0]}</span><span>${c[1]}</span><span>&rsaquo;</span></button>`:`<a class="cm" href="${CV}" download><i></i><span class="cmd">${c[0]}</span><span>${c[1]}</span><span>&rsaquo;</span></a>`).join("");
+$("#core").innerHTML=CORE.map(c=>`<button data-go="skills.md#${c[2]}" style="--c1:${c[3]}"><b>${c[0]}</b><p>${c[1]}</p></button>`).join("");
+$("#sg").innerHTML=SK.map(s=>`<div class="sk"><b style="background:${s[2]}22;border-color:${s[2]}99;color:${s[2]}">${s[1]}</b>${s[0]}</div>`).join("");
+$("#act").innerHTML=ACT.map(a=>`<div class="ai" style="--c1:${a[2]}"><b></b><span>${a[0]}</span><small>${a[1]}</small></div>`).join("");
+$("#q").addEventListener("keydown",e=>{if(e.key!=="Enter")return;const v=e.target.value.toLowerCase();const m=[["personal|side","projects.tsx"],["project|rag|bot","projects.tsx"],["skill|stack|tech","skills.md"],["experience|work|job|accenture","experience.md"],["educat|award|degree|certif","education.md"],["contact|email|hire","contact.md"]].find(x=>new RegExp(x[0]).test(v));go(m?m[1]:"me.md");e.target.value=""});
+const T=$("#term"),L=[["projects","View my personal projects","projects.tsx"],["experience","Show work experience","experience.md"],["skills","List my tech stack","skills.md"],["education","Education and awards","education.md"],["resume","Download my resume"],["contact","Get in touch","contact.md"],["clear","Clear terminal"]];
+const help=()=>"Available commands:\n"+L.map((c,i)=>`<span class="cb">${i?"|":"-"}   ${c[0].padEnd(13)}</span>- ${c[1]}`).join("\n");
+T.innerHTML=`<div><span class="pr">mahadev@portfolio:~$</span> <span class="w">help</span>\n${help()}</div><div id="out"></div><label class="ti"><span>mahadev@portfolio:~$</span><input id="ti" autocomplete="off" aria-label="Terminal input"></label>`;
+$("#ti").addEventListener("keydown",e=>{if(e.key!=="Enter")return;const v=e.target.value.trim().toLowerCase();e.target.value="";const o=$("#out");if(v==="clear"){o.innerHTML="";return}
+ let r="";if(v==="help")r=help();else{const c=L.find(x=>x[0]===v);if(!c)r=v?`command not found: ${v}. Type help`:"";else if(v==="resume"){r="Downloading resume...";const a=document.createElement("a");a.href=CV;a.download="";a.click()}else{r=`Opening ${c[2]}...`;go(c[2])}}
+ o.innerHTML+=`<div><span class="pr">mahadev@portfolio:~$</span> <span class="w">${v}</span>\n${r}</div>`;T.scrollTop=T.scrollHeight});
+const items=[...NAV.map(n=>[n[1],n[0]]),["Download resume","resume"],["Open GitHub","gh"],["Open LinkedIn","li"]];let pi=0;
+function plist(){const v=$("#pi").value.toLowerCase();const f=items.filter(i=>i[0].toLowerCase().includes(v));pi=Math.min(pi,Math.max(f.length-1,0));$("#pl").innerHTML=f.map((i,k)=>`<button class="${k===pi?"a":""}" data-p="${i[1]}">${i[0]}</button>`).join("");return f}
+function run(k){$("#pal").classList.remove("o");if(k==="resume")location.href=CV;else if(k==="gh")open(GH);else if(k==="li")open(LI);else go(k)}
+function openPal(){$("#pal").classList.add("o");$("#pi").value="";pi=0;plist();$("#pi").focus()}
+$("#sbx").onclick=openPal;$("#pl").addEventListener("click",e=>{const b=e.target.closest("[data-p]");if(b)run(b.dataset.p)});
+$("#pi").addEventListener("input",()=>{pi=0;plist()});
+$("#pi").addEventListener("keydown",e=>{const f=plist();if(e.key==="ArrowDown"){pi=Math.min(pi+1,f.length-1);plist()}if(e.key==="ArrowUp"){pi=Math.max(pi-1,0);plist()}if(e.key==="Enter"&&f[pi])run(f[pi][1]);if(e.key==="Escape")$("#pal").classList.remove("o")});
+$("#pal").addEventListener("mousedown",e=>{if(e.target.id==="pal")$("#pal").classList.remove("o")});
+addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();openPal()}if(e.key==="Escape")$("#pal").classList.remove("o")});
+draw();
+</script>
+</body>
+</html>
