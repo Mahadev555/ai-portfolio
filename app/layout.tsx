@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Mahadev Manerikar | AI Engineer",
   description:
     "AI Engineer building production-grade multi-agent orchestration and RAG systems on Azure.",
+  icons: {
+    icon: "/mahadev-manerikar.png",
+  },
   openGraph: {
     title: "Mahadev Manerikar | AI Engineer",
     description:
