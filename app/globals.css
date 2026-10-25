@@ -67,10 +67,24 @@ a { color: inherit; text-decoration: none; }
   border-bottom: 1px solid var(--line);
   background: #0a0c0f;
 }
-.window-dots { display: flex; gap: 6px; }
-.window-dots span { width: 9px; height: 9px; border-radius: 50%; background: #565b62; }
+.window-dots { display: flex; gap: 7px; }
+.window-dots span {
+  display: grid;
+  width: 12px;
+  height: 12px;
+  place-items: center;
+  border-radius: 50%;
+  color: #5b221d;
+  font: 700 9px/1 Arial, sans-serif;
+}
+.window-dots span::before { line-height: 1; }
+.window-dots span:first-child::before { content: "×"; }
 .window-dots span:first-child { background: #f26656; }
+.window-dots span:nth-child(2) { color: #765600; }
+.window-dots span:nth-child(2)::before { content: "−"; }
 .window-dots span:nth-child(2) { background: #e7bc45; }
+.window-dots span:nth-child(3) { color: #145627; }
+.window-dots span:nth-child(3)::before { content: "+"; }
 .window-dots span:nth-child(3) { background: #4dbb65; }
 .brand-mark {
   display: grid; place-items: center; width: 25px; height: 25px;
@@ -509,8 +523,8 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 560px) {
   body { font-size: 12px; }
   .titlebar { gap: 9px; padding: 0 9px; }
-  .window-dots { gap: 4px; }
-  .window-dots span { width: 7px; height: 7px; }
+  .window-dots { gap: 5px; }
+  .window-dots span { width: 10px; height: 10px; font-size: 8px; }
   .brand-mark { width: 23px; height: 23px; }
   .brand-copy strong { font-size: 9px; }
   .brand-copy small { font-size: 7px; }
