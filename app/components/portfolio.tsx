@@ -470,6 +470,10 @@ const commands: { label: string; description: string; view: View }[] = [
 
 const bottomTabs = ["TERMINAL", "OUTPUT", "PROBLEMS", "DEBUG CONSOLE", "PORTS", "GITLENS"] as const;
 type BottomTab = (typeof bottomTabs)[number];
+type TerminalEntry = { command: string; output: string[] };
+const terminalHelpOutput = [
+  "Available: help, clear, " + commands.map(({ label }) => label).join(", "),
+];
 
 function SectionHeading({
   eyebrow,
@@ -572,6 +576,10 @@ export default function Portfolio() {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [activeView, setActiveView] = useState<View>("home");
   const [activeBottomTab, setActiveBottomTab] = useState<BottomTab>("TERMINAL");
+  const [terminalInput, setTerminalInput] = useState("");
+  const [terminalHistory, setTerminalHistory] = useState<TerminalEntry[]>([
+    { command: "help", output: terminalHelpOutput },
+  ]);
   const [openSections, setOpenSections] = useState<string[]>(["about", "experience", "projects", "skills", "contact"]);
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [query, setQuery] = useState("");
@@ -653,6 +661,44 @@ export default function Portfolio() {
     } else if (event.key === "Enter" && filteredCommands[selectedCommand]) {
       navigate(filteredCommands[selectedCommand].view);
     }
+  }
+
+  function onTerminalSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const command = terminalInput.trim();
+    if (!command) return;
+
+    setTerminalInput("");
+    if (command.toLowerCase() === "clear") {
+      setTerminalHistory([]);
+      return;
+    }
+
+    if (command.toLowerCase() === "help") {
+      setTerminalHistory((history) => [
+        ...history,
+        { command, output: terminalHelpOutput },
+      ]);
+      return;
+    }
+
+    const requestedView = command.replace(/^\//, "").toLowerCase();
+    const destination = commands.find(
+      ({ label, view }) => label.slice(1) === requestedView || view === requestedView,
+    );
+    if (destination) {
+      setTerminalHistory((history) => [
+        ...history,
+        { command, output: [`Opening ${destination.view}...`] },
+      ]);
+      navigate(destination.view);
+      return;
+    }
+
+    setTerminalHistory((history) => [
+      ...history,
+      { command, output: [`Command not found: ${command}. Type help to see available commands.`] },
+    ]);
   }
 
   return (
@@ -945,13 +991,27 @@ export default function Portfolio() {
             ))}
           </div>
           {activeBottomTab === "TERMINAL" && (
-            <div className="terminal" role="tabpanel">
-              <div><span className="prompt">mahadev@portfolio</span>:<span style={{ color: "#b6ad9d" }}>~</span>$ help</div>
-              <div>Portfolio commands:</div>
-              <div><span className="cmd">  /projects</span> &nbsp; selected systems and outcomes</div>
-              <div><span className="cmd">  /experience</span> career journey</div>
-              <div><span className="cmd">  /contact</span> get in touch</div>
-              <div><span className="prompt">mahadev@portfolio</span>:<span style={{ color: "#b6ad9d" }}>~</span>$ <span className="terminal-cursor" /></div>
+            <div className="terminal" role="tabpanel" aria-label="Portfolio command terminal">
+              <div className="terminal-history" aria-live="polite">
+                {terminalHistory.map((entry, index) => (
+                  <div key={`${index}-${entry.command}`}>
+                    <div><span className="prompt">mahadev@portfolio</span>:<span className="terminal-path">~</span>$ {entry.command}</div>
+                    {entry.output.map((line) => <div className="terminal-output" key={line}>{line}</div>)}
+                  </div>
+                ))}
+              </div>
+              <form className="terminal-form" onSubmit={onTerminalSubmit}>
+                <label className="prompt" htmlFor="terminal-command">mahadev@portfolio</label>
+                <span className="terminal-path">:~$</span>
+                <input
+                  id="terminal-command"
+                  value={terminalInput}
+                  onChange={(event) => setTerminalInput(event.target.value)}
+                  aria-label="Enter a portfolio command"
+                  autoComplete="off"
+                  spellCheck={false}
+                />
+              </form>
             </div>
           )}
           {activeBottomTab === "OUTPUT" && (
